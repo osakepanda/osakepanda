@@ -1,0 +1,26 @@
+name: CI
+
+on:
+  repository_dispatch:
+    types: [prismic_release]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    env:
+      PRISMIC_KEY: ${{ secrets.PRISMIC_KEY }}
+
+    steps:
+      - uses: actions/checkout@v1
+      - uses: actions/setup-node@v1
+        with:
+          node-version: 12
+      - run: npm install
+      - run: npm run build
+      - uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          user_name: 'buildbot'
+          user_email: 'yonayona.kyoto@gmail.com'
+          publish_dir: ./public
+          allow_empty_commit: true

@@ -1,0 +1,105 @@
+{
+  "Main" : {
+    "logo" : {
+      "type" : "Image",
+      "config" : {
+        "constraint" : { },
+        "thumbnails" : [ ],
+        "label" : "logo"
+      }
+    },
+    "baseline" : {
+      "type" : "StructuredText",
+      "config" : {
+        "single" : "heading1",
+        "label" : "ベースライン"
+      }
+    },
+    "opening" : {
+      "type" : "StructuredText",
+      "config" : {
+        "single" : "hyperlink",
+        "allowTargetBlank" : true,
+        "label" : "営業時間"
+      }
+    },
+    "address" : {
+      "type" : "StructuredText",
+      "config" : {
+        "single" : "hyperlink",
+        "allowTargetBlank" : true,
+        "label" : "住所"
+      }
+    },
+    "phone" : {
+      "type" : "Text",
+      "config" : {
+        "label" : "電話番号"
+      }
+    },
+    "cover" : {
+      "type" : "Image",
+      "config" : {
+        "constraint" : { },
+        "thumbnails" : [ ],
+        "label" : "写真"
+      }
+    },
+    "content" : {
+      "type" : "StructuredText",
+      "config" : {
+        "multi" : "paragraph, strong, em, hyperlink, image",
+        "allowTargetBlank" : true,
+        "label" : "content"
+      }
+    },
+    "signature" : {
+      "type" : "StructuredText",
+      "config" : {
+        "single" : "strong",
+        "label" : "署名"
+      }
+    },
+    "location" : {
+      "type" : "GeoPoint",
+      "config" : {
+        "label" : "通過点"
+      }
+    }
+  },
+  "SEO" : {
+    "seo_title" : {
+      "type" : "Text",
+      "config" : {
+        "label" : "SEO title",
+        "placeholder" : "SEO title"
+      }
+    },
+    "seo_description" : {
+      "type" : "Text",
+      "config" : {
+        "label" : "SEO description"
+      }
+    },
+    "seo_author" : {
+      "type" : "Text",
+      "config" : {
+        "label" : "SEO author"
+      }
+    },
+    "seo_instagram" : {
+      "type" : "Text",
+      "config" : {
+        "label" : "SEO instagram"
+      }
+    },
+    "seo_icon" : {
+      "type" : "Image",
+      "config" : {
+        "constraint" : { },
+        "thumbnails" : [ ],
+        "label" : "seo_icon"
+      }
+    }
+  }
+}
