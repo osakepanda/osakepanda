@@ -11,6 +11,7 @@ jobs:
       PRISMIC_KEY: ${{ secrets.PRISMIC_KEY }}
 
     steps:
+      - uses: actions/cache@v3
       - uses: actions/checkout@v3
       - uses: actions/setup-node@v2
         with:
