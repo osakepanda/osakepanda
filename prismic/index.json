@@ -48,7 +48,7 @@
     "content" : {
       "type" : "StructuredText",
       "config" : {
-        "multi" : "paragraph, strong, em, hyperlink, image",
+        "multi" : "paragraph,strong,em,hyperlink,image",
         "allowTargetBlank" : true,
         "label" : "content"
       }
