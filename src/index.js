@@ -11,8 +11,8 @@ import Post from "./components/post"
 import SlideShow from "./components/SlideShow"
 
 export const query = graphql`
-  query IndexQuery($uid: String) {
-    prismicIndex(uid: {eq: $uid}) {
+  query Index($lang: String) {
+    prismicIndex(lang: {eq: $lang}) {
       data {
         seo_title
         seo_description
