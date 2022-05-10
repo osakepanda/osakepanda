@@ -11,8 +11,8 @@ import Post from "./components/post"
 import SlideShow from "./components/SlideShow"
 
 export const query = graphql`
-  query Index($lang: String) {
-    prismicIndex(lang: {eq: $lang}) {
+  query IndexQuery($uid: String) {
+    prismicIndex(uid: {eq: $uid}) {
       data {
         seo_title
         seo_description
@@ -138,7 +138,7 @@ class Index extends React.Component {
 
         <section dangerouslySetInnerHTML={{ __html: content.html }}></section>
 
-        <SlideShow items={prismicIndex.data.body[0].items} />
+        {/*<SlideShow items={prismicIndex.data.body[0].items} />*/}
 
         <aside>
           { posts.map((post, index) => <Post key={index} {...post}  />) }
