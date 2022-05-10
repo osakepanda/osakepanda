@@ -8,6 +8,7 @@ import getposts from "./instagram"
 
 import SEO from "./components/seo"
 import Post from "./components/post"
+import SlideShow from "./components/SlideShow"
 
 export const query = graphql`
   query Index($lang: String) {
@@ -42,6 +43,37 @@ export const query = graphql`
         phone
         content {
           html
+        }
+        body {
+          ... on PrismicIndexBodyImagesSlider {
+            slice_type
+            slice_label
+            primary {
+              eyebrow_headline {
+                text
+              }
+              title {
+                text
+              }
+              description {
+                text
+              }
+            }
+            items {
+              image {
+                dimensions {
+                  width
+                  height
+                }
+                alt
+                copyright
+                url
+              }
+              description {
+                text
+              }
+            }
+          }  
         }
       }
     }
@@ -105,6 +137,8 @@ class Index extends React.Component {
         </header>
 
         <section dangerouslySetInnerHTML={{ __html: content.html }}></section>
+
+        <SlideShow items={prismicIndex.data.body[0].items} />
 
         <aside>
           { posts.map((post, index) => <Post key={index} {...post}  />) }
