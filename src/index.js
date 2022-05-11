@@ -59,7 +59,7 @@ export const query = graphql`
                 text
               }
             }
-            items {
+            fields {
               image {
                 dimensions {
                   width
@@ -114,8 +114,6 @@ class Index extends React.Component {
       content: seo_icon.dimensions.height,
     }]
 
-    console.log(data)
-
     return (
       <>
         <SEO
@@ -140,7 +138,7 @@ class Index extends React.Component {
 
         <section dangerouslySetInnerHTML={{ __html: content.html }}></section>
 
-        {/*<SlideShow items={prismicIndex.data.body[0].items} />*/}
+        <SlideShow items={prismicIndex.data.body[0].fields} />
 
         <aside>
           { posts.map((post, index) => <Post key={index} {...post}  />) }
