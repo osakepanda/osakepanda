@@ -10,57 +10,115 @@ import SEO from "./components/seo"
 import Post from "./components/post"
 import SlideShow from "./components/SlideShow"
 
+// export const query = graphql`
+//   query Index($lang: String) {
+//     prismicIndex(lang: {eq: $lang}) {
+//       data {
+//         seo_title
+//         seo_description
+//         seo_author
+//         seo_instagram
+//         seo_icon {
+//           dimensions {
+//             width
+//             height
+//           }
+//           url
+//         }
+//         logo {
+//           url
+//         }
+//         cover {
+//           url
+//         }
+//         baseline {
+//           text
+//         }
+//         opening {
+//           text
+//         }
+//         address {
+//           text
+//         }
+//         phone
+//         content {
+//           html
+//         }
+//         body {
+//           ... on PrismicIndexBodyImagesSlider {
+//             items {
+//               image {
+//                 dimensions {
+//                   width
+//                   height
+//                 }
+//                 alt
+//                 copyright
+//                 url
+//               }
+//               description {
+//                 text
+//               }
+//             }
+//           }
+//         }
+//       }
+//     }
+//   }`
+
 export const query = graphql`
   query Index($lang: String) {
     prismicIndex(lang: {eq: $lang}) {
-      data {
-        seo_title
-        seo_description
-        seo_author
-        seo_instagram
-        seo_icon {
-          dimensions {
-            width
-            height
-          }
-          url
-        }
-        logo {
-          url
-        }
-        cover {
-          url
-        }
-        baseline {
-          text
-        }
-        opening {
-          text
-        }
-        address {
-          text
-        }
-        phone
-        content {
-          html
-        }
-        body {
-          ... on PrismicIndexBodyImagesSlider {
-            items {
-              image {
-                dimensions {
-                  width
-                  height
-                }
-                alt
-                copyright
-                url
-              }
-              description {
-                text
-              }
+      edges {
+        node {
+          seo_title
+          seo_description
+          seo_author
+          seo_instagram
+          seo_icon {
+            dimensions {
+              width
+              height
             }
-          }  
+            url
+          }
+          logo {
+            url
+          }
+          cover {
+            url
+          }
+          baseline {
+            text
+          }
+          opening {
+            text
+          }
+          address {
+            text
+          }
+          phone
+          content {
+            html
+          }
+          body {
+            ... on PrismicIndexBodyImagesSlider {
+              items {
+                image {
+                  dimensions {
+                    width
+                    height
+                  }
+                  alt
+                  copyright
+                  url
+                }
+                description {
+                  text
+                }
+              }
+            }  
+          }
         }
       }
     }
