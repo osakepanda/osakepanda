@@ -46,7 +46,7 @@ export const query = graphql`
         }
         body {
           ... on PrismicIndexBodyImagesSlider {
-            fields {
+            items {
               image {
                 dimensions {
                   width
@@ -125,7 +125,7 @@ class Index extends React.Component {
 
         <section dangerouslySetInnerHTML={{ __html: content.html }}></section>
 
-        <SlideShow items={prismicIndex.data.body[0].fields} />
+        <SlideShow items={prismicIndex.data.body[0].items} />
 
         <aside>
           { posts.map((post, index) => <Post key={index} {...post}  />) }
