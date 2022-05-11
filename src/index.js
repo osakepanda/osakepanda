@@ -114,6 +114,8 @@ class Index extends React.Component {
       content: seo_icon.dimensions.height,
     }]
 
+    console.log(data)
+
     return (
       <>
         <SEO
