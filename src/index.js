@@ -10,115 +10,70 @@ import SEO from "./components/seo"
 import Post from "./components/post"
 import SlideShow from "./components/SlideShow"
 
-// export const query = graphql`
-//   query Index($lang: String) {
-//     prismicIndex(lang: {eq: $lang}) {
-//       data {
-//         seo_title
-//         seo_description
-//         seo_author
-//         seo_instagram
-//         seo_icon {
-//           dimensions {
-//             width
-//             height
-//           }
-//           url
-//         }
-//         logo {
-//           url
-//         }
-//         cover {
-//           url
-//         }
-//         baseline {
-//           text
-//         }
-//         opening {
-//           text
-//         }
-//         address {
-//           text
-//         }
-//         phone
-//         content {
-//           html
-//         }
-//         body {
-//           ... on PrismicIndexBodyImagesSlider {
-//             items {
-//               image {
-//                 dimensions {
-//                   width
-//                   height
-//                 }
-//                 alt
-//                 copyright
-//                 url
-//               }
-//               description {
-//                 text
-//               }
-//             }
-//           }
-//         }
-//       }
-//     }
-//   }`
-
 export const query = graphql`
   query Index($lang: String) {
     prismicIndex(lang: {eq: $lang}) {
-      edges {
-        node {
-          seo_title
-          seo_description
-          seo_author
-          seo_instagram
-          seo_icon {
-            dimensions {
-              width
-              height
-            }
-            url
+      data {
+        seo_title
+        seo_description
+        seo_author
+        seo_instagram
+        seo_icon {
+          dimensions {
+            width
+            height
           }
-          logo {
-            url
-          }
-          cover {
-            url
-          }
-          baseline {
-            text
-          }
-          opening {
-            text
-          }
-          address {
-            text
-          }
-          phone
-          content {
-            html
-          }
-          body {
-            ... on PrismicIndexBodyImagesSlider {
-              items {
-                image {
-                  dimensions {
-                    width
-                    height
-                  }
-                  alt
-                  copyright
-                  url
-                }
-                description {
-                  text
-                }
+          url
+        }
+        logo {
+          url
+        }
+        cover {
+          url
+        }
+        baseline {
+          text
+        }
+        opening {
+          text
+        }
+        address {
+          text
+        }
+        phone
+        content {
+          html
+        }
+        body {
+          ... on PrismicIndexBodyImagesSlider {
+            slice_type
+            slice_label
+            primary {
+              eyebrow_headline {
+                text
               }
-            }  
-          }
+              title {
+                text
+              }
+              description {
+                text
+              }
+            }
+            items {
+              image {
+                dimensions {
+                  width
+                  height
+                }
+                alt
+                copyright
+                url
+              }
+              description {
+                text
+              }
+            }
+          }  
         }
       }
     }
@@ -159,7 +114,7 @@ class Index extends React.Component {
       content: seo_icon.dimensions.height,
     }]
 
-      return (
+    return (
       <>
         <SEO
           lang={lang}
