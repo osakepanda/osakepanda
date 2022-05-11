@@ -46,19 +46,6 @@ export const query = graphql`
         }
         body {
           ... on PrismicIndexBodyImagesSlider {
-            slice_type
-            slice_label
-            primary {
-              eyebrow_headline {
-                text
-              }
-              title {
-                text
-              }
-              description {
-                text
-              }
-            }
             fields {
               image {
                 dimensions {
@@ -114,7 +101,7 @@ class Index extends React.Component {
       content: seo_icon.dimensions.height,
     }]
 
-    return (
+      return (
       <>
         <SEO
           lang={lang}
