@@ -137,9 +137,9 @@ class Index extends React.Component {
           </hgroup>
         </header>
 
-        <section dangerouslySetInnerHTML={{ __html: content.html }}></section>
-
         <SlideShow items={prismicIndex.data.body[0].items} />
+
+        <section dangerouslySetInnerHTML={{ __html: content.html }}></section>
 
         <aside>
           { posts.map((post, index) => <Post key={index} {...post}  />) }
