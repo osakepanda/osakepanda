@@ -7,16 +7,14 @@ body {
 }
 .slide-container {
     direction: ltr;
-    width: 50%;
+    width: 70%;
     margin: auto;
 }
 .each-slide > div {
     display: flex;
     align-items: center;
     justify-content: center;
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center center;
+    background-size: cover;
     height: 300px;
 }
 .react-slideshow-container .nav[data-type="prev"] span {
@@ -29,16 +27,6 @@ body {
     border-left: none;
     border-bottom: none;
 }
-.react-slideshow-container .default-nav {
-    background: #66666666;
-}
-.react-slideshow-container .default-nav:hover {
-    background: #666666;
-}
-.react-slideshow-container .default-nav:focus {
-    background: #666666;
-}
-
 .each-slide span {
     padding: 20px;
     font-size: 20px;
@@ -65,8 +53,4 @@ body {
 }
 .react-slideshow-container + div.indicators > div:last-of-type {
     margin-right: 10px;
-}
-
-.images-wrap {
-    display: contents;
 }
