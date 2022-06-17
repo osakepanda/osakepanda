@@ -17,8 +17,8 @@ const properties = {
 
 const SlideShow = ({items}) => {
   const rows = items.map((item, index) =>
-    <div className="each-slide">
-      <div key={index} style={{ width: `${item.image.dimensions.width}`, backgroundImage: `url(${item.image.url})`}} />
+    <div key={index} className="each-slide">
+      <div style={{ backgroundImage: `url(${item.image.url})`}} />
     </div>
   );
 
