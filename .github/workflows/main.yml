@@ -15,9 +15,6 @@ jobs:
       - uses: actions/setup-node@v3
         with:
           node-version: '14'
-      - uses: actions/setup-node@v3
-        with:
-          node-version: 14
       - uses: actions/cache@v3
         id: node_modules_cache_id
         env:
