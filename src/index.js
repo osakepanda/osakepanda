@@ -137,7 +137,9 @@ class Index extends React.Component {
           </hgroup>
         </header>
 
-        <SlideShow items={prismicIndex.data.body[0].items} />
+        <div className={'App'} >
+          <SlideShow items={prismicIndex.data.body[0].items} />
+        </div>
 
         <section dangerouslySetInnerHTML={{ __html: content.html }}></section>
 

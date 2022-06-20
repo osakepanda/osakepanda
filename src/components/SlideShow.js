@@ -7,7 +7,7 @@ const properties = {
   transitionDuration: 500,       // 移動時間(ms)
   infinite: true,
   indicators: true,
-  autoplay: false,
+  autoplay: true,
   arrows: true,
   pauseOnHover: true,
   onChange: (oldIndex, newIndex) => {
@@ -16,22 +16,22 @@ const properties = {
 };
 
 const SlideShow = ({items}) => {
-  const rows = items.map((item, index) =>
-    <div key={index} className="each-slide">
-      <div style={{ backgroundImage: `url(${item.image.url})`}} />
-    </div>
-  );
-
-
   return (
-    <>
+    <div className="App">
       <div className="slide-container">
         <Slide {...properties}>
-          {rows}
+          {items.map((item, index) => {
+              return (
+                <div className="each-slide" key={item}>
+                  <div key={index} style={{ backgroundImage: `url(${item.image.url})` }} />
+                </div>
+              )
+            }
+          )}
         </Slide>
       </div>
-    </>
-  );
+    </div>
+  )
 }
 
 export default SlideShow
