@@ -15,7 +15,7 @@ const properties = {
   }
 };
 
-const SlideShow = ({items}) => {
+const SlideShow = ({ items }) => {
   return (
     <div className="App">
       <div className="slide-container">
