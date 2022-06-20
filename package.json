@@ -4,6 +4,7 @@
   "description": "A simple starter to get up and developing quickly with Gatsby",
   "version": "0.1.0",
   "author": "Kyle Mathews <mathews.kyle@gmail.com>",
+  "homepage": "https://osakepanda.github.io/osakepanda",
   "dependencies": {
     "@babel/core": "^7.14.6",
     "@babel/plugin-proposal-optional-chaining": "^7.14.5",
@@ -39,7 +40,9 @@
     "start": "npm run develop",
     "serve": "gatsby serve",
     "clean": "gatsby clean",
-    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1"
+    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1",
+    "predeploy":"npm run build",
+    "deploy":"gh-pages -b master -d build"
   },
   "repository": {
     "type": "git",
