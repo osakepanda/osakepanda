@@ -17,6 +17,7 @@
     "gatsby-plugin-sharp": "^3.8.0",
     "gatsby-source-prismic": "^3.3.6",
     "gatsby-transformer-sharp": "^3.8.0",
+    "gh-pages": "^4.0.0",
     "instagram-posts": "^2.2.0",
     "prop-types": "^15.7.2",
     "react": "^17.0.2",
@@ -42,7 +43,7 @@
     "clean": "gatsby clean",
     "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1",
     "predeploy":"npm run build",
-    "deploy":"gh-pages -b master -d build"
+    "deploy": "gatsby build --prefix-paths && gh-pages -d public"
   },
   "repository": {
     "type": "git",
