@@ -17,20 +17,27 @@ const properties = {
 
 const SlideShow = ({ items }) => {
   return (
-    <div className="App">
-      <div className="slide-container">
-        <Slide {...properties}>
-          {items.map((item, index) => {
-              return (
-                <div className="each-slide" key={item}>
-                  <div key={index} style={{ backgroundImage: `url(${item.image.url})` }} />
-                </div>
-              )
-            }
-          )}
-        </Slide>
-      </div>
+    <div className="slide-container">
+      <Slide {...properties}>
+        {items.map((each, index) => (
+          <img key={index} style={{ width: "100%" }} src={each} />
+        ))}
+      </Slide>
     </div>
+    // <div className="App">
+    //   <div className="slide-container">
+    //     <Slide {...properties}>
+    //       {items.map((item, index) => {
+    //           return (
+    //             <div className="each-slide" key={item}>
+    //               <div key={index} style={{ backgroundImage: `url(${item.image.url})` }} />
+    //             </div>
+    //           )
+    //         }
+    //       )}
+    //     </Slide>
+    //   </div>
+    // </div>
   )
 }
 
