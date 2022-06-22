@@ -10,13 +10,25 @@ body {
     width: 70%;
     margin: auto;
 }
-.each-slide > div {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-size: cover;
-    height: 300px;
+@media screen and(max-width: 480px) {
+    .each-slide > div {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-size: cover;
+        height: 400px;
+    }
 }
+@media screen and(min-width: 1280px) {
+    .each-slide > div {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-size: cover;
+        height: 800px;
+    }
+}
+
 .react-slideshow-container .nav[data-type="prev"] span {
     margin-left: 5px;
     border-right: none;
