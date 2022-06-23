@@ -145,7 +145,11 @@ class Index extends React.Component {
           { posts.map((post, index) => <Post key={index} {...post}  />) }
         </aside>
 
-        <iframe src="https://www.google.com/maps/place/%E9%85%92%E3%83%91%E3%83%B3%E3%83%80/@35.004775,135.7669587,19.34z/data=!4m5!3m4!1s0x600109f851b5a251:0x65d5934b94fa18a1!8m2!3d35.0047126!4d135.7676057" title="maps"></iframe>
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d643.8034042382686!2d135.76695870852805!3d35.004774988353766!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x600109f851b5a251%3A0x65d5934b94fa18a1!2z6YWS44OR44Oz44OA!5e0!3m2!1sja!2sjp!4v1655968885040!5m2!1sja!2sjp"
+          width="600" height="450" style="border:0;" allowFullScreen="" loading="lazy"
+          referrerPolicy="no-referrer-when-downgrade"></iframe>
+        {/*<iframe src="https://maps.google.com/maps?q=panda%20sake%20bar&z=13&output=embed" title="maps"></iframe>*/}
       
         <footer>&copy;2018 – made with <span role="img" aria-label="fuel">🍙</span> by <a href="https://instagram.com/y_nk">@y_nk</a></footer>
       </>
