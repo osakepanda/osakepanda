@@ -22,9 +22,14 @@ const SlideShow = ({ items }) => {
         <Slide {...properties}>
           {items.map((item, index) => {
               return (
-                <div className="each-slide" key={item}>
-                  <div key={index} style={{ backgroundImage: `url(${item.image.url})` }} />
-                </div>
+                <>
+                  <div className="pc-each-slide">
+                    <div key={index} style={{ backgroundImage: `url(${item.image.url})` }} />
+                  </div>
+                  <div className="sp-each-slide" >
+                    <div key={index} style={{ backgroundImage: `url(${item.image.url})` }} />
+                  </div>
+                </>
               )
             }
           )}

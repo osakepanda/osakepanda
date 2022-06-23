@@ -10,12 +10,21 @@ body {
     width: 70%;
     margin: auto;
 }
-.each-slide > div {
+.pc-each-slide > div {
     display: flex;
     align-items: center;
     justify-content: center;
     background-size: cover;
     height: 400px;
+}
+@media only screen and (max-width: 750px) {
+    .sp-each-slide > div {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-size: cover;
+        height: 300px;
+    }
 }
 .react-slideshow-container .nav[data-type="prev"] span {
     margin-left: 5px;
