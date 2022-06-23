@@ -23,11 +23,8 @@ const SlideShow = ({ items }) => {
           {items.map((item, index) => {
               return (
                 <>
-                  <div className="pc-each-slide">
-                    <div key={index} style={{ backgroundImage: `url(${item.image.url})` }} />
-                  </div>
-                  <div className="sp-each-slide" >
-                    <div key={index} style={{ backgroundImage: `url(${item.image.url})` }} />
+                  <div className="each-slide">
+                    <div key={index} style={{ backgroundImage: `url(${item.image.url})`}} />
                   </div>
                 </>
               )
