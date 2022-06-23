@@ -1,5 +1,5 @@
 body {
-    direction: rtl;
+    direction: unset;
 }
 .App {
     font-family: sans-serif;
