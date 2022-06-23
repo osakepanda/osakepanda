@@ -141,9 +141,9 @@ class Index extends React.Component {
 
         <section dangerouslySetInnerHTML={{ __html: content.html }}></section>
 
-        {/*<aside>*/}
-        {/*  { posts.map((post, index) => <Post key={index} {...post}  />) }*/}
-        {/*</aside>*/}
+        <aside>
+          { posts.map((post, index) => <Post key={index} {...post}  />) }
+        </aside>
 
         <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d643.8034042382686!2d135.76695870852805!3d35.004774988353766!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x600109f851b5a251%3A0x65d5934b94fa18a1!2z6YWS44OR44Oz44OA!5e0!3m2!1sja!2sjp!4v1655968885040!5m2!1sja!2sjp" title="maps"></iframe>
       
