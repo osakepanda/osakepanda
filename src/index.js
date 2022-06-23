@@ -145,7 +145,7 @@ class Index extends React.Component {
           { posts.map((post, index) => <Post key={index} {...post}  />) }
         </aside>
 
-        <iframe src="https://maps.google.com/maps?q=panda%20sake%20bar&z=13&output=embed" title="maps"></iframe>
+        <iframe src="https://www.google.com/maps/place/%E9%85%92%E3%83%91%E3%83%B3%E3%83%80/@35.004775,135.7669587,19.34z/data=!4m5!3m4!1s0x600109f851b5a251:0x65d5934b94fa18a1!8m2!3d35.0047126!4d135.7676057" title="maps"></iframe>
       
         <footer>&copy;2018 – made with <span role="img" aria-label="fuel">🍙</span> by <a href="https://instagram.com/y_nk">@y_nk</a></footer>
       </>
