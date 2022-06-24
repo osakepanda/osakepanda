@@ -6,6 +6,8 @@ import PropTypes from "prop-types"
 
 import { graphql } from "gatsby"
 import getPosts from "./instagram"
+import { IconContext } from 'react-icons'
+import { GrInstagram } from 'react-icons/gr';
 
 import SEO from "./components/seo"
 import Post from "./components/post"
@@ -98,6 +100,7 @@ class Index extends React.Component {
       seo_description,
       seo_author,
       seo_icon,
+      seo_instagram,
       logo,
       cover,
       baseline,
@@ -134,6 +137,13 @@ class Index extends React.Component {
             <h3><span role="img" aria-label="time">🕖</span>{ opening.text }</h3>
             <address><span role="img" aria-label="location">📍</span>{ address.text }</address>
             <phone><span role="img" aria-label="phone">📞</span><a href={`tel:${phone}`}>{ phone }</a></phone>
+            <div className={"sns-div"}>
+              <IconContext.Provider value={{size: "50", color: "#01164b"}} >
+                <a href={`https://www.instagram.com/${seo_instagram}/` } target="_blank">
+                  <GrInstagram />
+                </a>
+              </IconContext.Provider>
+            </div>
           </hgroup>
         </header>
 

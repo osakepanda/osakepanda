@@ -136,6 +136,11 @@ header > hgroup > phone {
   color: #98c8dd;
 }
 
+.sns-div {
+  display: block;
+  margin: 1rem 0 0 0;
+}
+
 section {
   margin: 0 auto;
   padding: 10vw 20vw;
@@ -242,6 +247,10 @@ svg path {
   stroke-width: 0;
 }
 
+a > svg > path {
+  fill: #01164b;
+  stroke-width: 0;
+}
 
 iframe[title="maps"] {
   display: block;
