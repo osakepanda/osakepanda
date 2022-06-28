@@ -156,7 +156,27 @@ class Index extends React.Component {
         </aside>
 
         <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d643.8034042382686!2d135.76695870852805!3d35.004774988353766!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x600109f851b5a251%3A0x65d5934b94fa18a1!2z6YWS44OR44Oz44OA!5e0!3m2!1sja!2sjp!4v1655968885040!5m2!1sja!2sjp" title="maps"></iframe>
-      
+
+        <div className={"sns-div"}>
+          <h2>姉妹店</h2>
+          <div className={"sns-icons-row"} >
+            <IconContext.Provider value={{size: "50", color: "#01164b"}} >
+              <div className={"sns-icon"}>
+                <h3>YonaYona</h3>
+                <a href={`https://www.instagram.com/yona_yona_kyoto/` } target="_blank">
+                  <GrInstagram />
+                </a>
+              </div>
+              <div className={"sns-icon"}>
+                <h3>喫茶ジラフ</h3>
+                <a href={`https://www.instagram.com/kissa_giraffe_kyoto/` } target="_blank">
+                  <GrInstagram />
+                </a>
+              </div>
+            </IconContext.Provider>
+          </div>
+        </div>
+
         <footer>&copy;2018 – made with <span role="img" aria-label="fuel">🍙</span> by <a href="https://instagram.com/y_nk">@y_nk</a></footer>
       </>
     )

@@ -109,7 +109,8 @@ header > hgroup > h1 {
   z-index: 1;
 }
 
-header > hgroup > h2 {
+header > hgroup > h2,
+.sns-div > h2 {
   margin: 0 0 1.5rem 0;
   margin-top: -1vw;
   color: #236795;
@@ -119,7 +120,8 @@ header > hgroup > h2 {
 }
 
 @media (max-width: 640px) {
-  header > hgroup > h2 {
+  header > hgroup > h2,
+  .sns-div > h2 {
     margin-top: 2.5rem;
     font-size: 1rem;
   }
@@ -127,7 +129,8 @@ header > hgroup > h2 {
 
 header > hgroup > h3,
 header > hgroup > address,
-header > hgroup > phone {
+header > hgroup > phone,
+.sns-icon > h3 {
   display: block;
   margin: .25rem 0 0 0;
   font-size: .8rem;
@@ -137,8 +140,20 @@ header > hgroup > phone {
 }
 
 .sns-div {
+  text-align: center;
   display: block;
+  margin: 1rem 0 1rem 0;
+}
+
+.sns-icons-row {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
   margin: 1rem 0 0 0;
+}
+
+.sns-icon {
+  margin: 0 15px 0;
 }
 
 section {
@@ -248,6 +263,11 @@ svg path {
 }
 
 a > svg > path {
+  fill: #01164b;
+  stroke-width: 0;
+}
+
+.sns-icon > a > svg > path {
   fill: #01164b;
   stroke-width: 0;
 }
