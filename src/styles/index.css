@@ -262,11 +262,6 @@ svg path {
   stroke-width: 0;
 }
 
-a > svg > path {
-  fill: #01164b;
-  stroke-width: 0;
-}
-
 .sns-icon > a > svg > path {
   fill: #01164b;
   stroke-width: 0;
