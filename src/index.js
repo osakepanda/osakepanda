@@ -139,9 +139,11 @@ class Index extends React.Component {
             <phone><span role="img" aria-label="phone">📞</span><a href={`tel:${phone}`}>{ phone }</a></phone>
             <div className={"sns-div"}>
               <IconContext.Provider value={{size: "50", color: "#01164b"}} >
-                <a href={`https://www.instagram.com/${seo_instagram}/` } target="_blank">
-                  <GrInstagram />
-                </a>
+                <div className={"sns-icon"} >
+                  <a href={"https://www.instagram.com/sakepanda_kyoto/" } target="_blank">
+                    <GrInstagram />
+                  </a>
+                </div>
               </IconContext.Provider>
             </div>
           </hgroup>
