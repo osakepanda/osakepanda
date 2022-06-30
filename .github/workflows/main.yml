@@ -37,3 +37,4 @@ jobs:
           user_email: 'yonayona.kyoto@gmail.com'
           publish_dir: ./public
           allow_empty_commit: true
+          cname: sakepanda.com
