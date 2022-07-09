@@ -3,7 +3,7 @@ require("dotenv").config({
 })
 
 module.exports = {
-  pathPrefix: "/osakepanda",
+  pathPrefix: "/",
   plugins: [
     `gatsby-plugin-react-helmet`,
     `@bumped-inc/gatsby-plugin-optional-chaining`,

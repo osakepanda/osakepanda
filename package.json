@@ -4,7 +4,7 @@
   "description": "A simple starter to get up and developing quickly with Gatsby",
   "version": "0.1.0",
   "author": "Kyle Mathews <mathews.kyle@gmail.com>",
-  "homepage": "http://sakepanda.com",
+  "homepage": "https://sakepanda.com",
   "dependencies": {
     "@babel/core": "^7.14.6",
     "@babel/plugin-proposal-optional-chaining": "^7.14.5",
