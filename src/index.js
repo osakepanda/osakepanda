@@ -86,8 +86,8 @@ class Index extends React.Component {
   state = { posts: [] }
 
   componentDidMount() {
-    getPosts(this.props.data.prismicIndex.data.seo_instagram)
-      .then(posts => this.setState({ posts }))
+    // getPosts(this.props.data.prismicIndex.data.seo_instagram)
+    //   .then(posts => this.setState({ posts }))
   }
 
   render() {
